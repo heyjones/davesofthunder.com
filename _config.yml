@@ -1,0 +1,51 @@
+title: Daves of Thunder
+tagline: "Okie Dokie!"
+description: "Daves of Thunder Podcast"
+url: "https://heyjones.github.io"
+baseurl: "/davesofthunder.com"
+
+permalink: /:title/
+
+collections:
+  songs:
+    output: true
+    permalink: /songs/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "songs"
+    values:
+      layout: "song"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+paginate: 10
+paginate_path: "/page/:num/"
+
+plugins:
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Social / Subscribe links
+apple_podcasts: "https://podcasts.apple.com/us/podcast/daves-of-thunder/id1393182814"
+spotify: "https://open.spotify.com/show/5b5b52XhFqms7aILIDPHmC"
+stitcher: "https://www.stitcher.com/podcast/daves-of-thunder"
+twitter: "https://twitter.com/dotpodcast"
+facebook: "https://www.facebook.com/davesofthunder/"
+youtube: "https://www.youtube.com/channel/UCxqBT89db9_TNxjVg8SvtQg"
+instagram: "https://www.instagram.com/dotpodcast/"
+reddit: "https://www.reddit.com/r/DavesofThunder"
+patreon: "https://www.patreon.com/davesofthunder"

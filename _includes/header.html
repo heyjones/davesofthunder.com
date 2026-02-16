@@ -1,0 +1,19 @@
+<header class="site-header" style="background-image: url('{{ '/assets/images/header-bg.jpg' | relative_url }}');">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}">
+    </a>
+    <div class="site-branding">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <p class="site-tagline">{{ site.tagline }}</p>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ '/subscribe/' | relative_url }}"{% if page.url == '/subscribe/' %} class="active"{% endif %}>Subscribe</a></li>
+      <li><a href="{{ '/songs/' | relative_url }}"{% if page.url == '/songs/' %} class="active"{% endif %}>Songs</a></li>
+      <li><a href="{{ '/cast/' | relative_url }}"{% if page.url == '/cast/' %} class="active"{% endif %}>Cast</a></li>
+    </ul>
+  </nav>
+</header>
