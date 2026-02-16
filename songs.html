@@ -1,0 +1,24 @@
+---
+layout: page
+title: Songs
+permalink: /songs/
+---
+
+<p>Listener-submitted songs inspired by the show.</p>
+
+<ul class="songs-list">
+{% assign sorted_songs = site.songs | sort: 'date' | reverse %}
+{% for song in sorted_songs %}
+  <li>
+    <div class="song-info">
+      <span class="song-title"><a href="{{ song.url | relative_url }}">{{ song.title }}</a></span>
+      <span class="song-date">{{ song.date | date: "%B %-d, %Y" }}</span>
+    </div>
+    {% if song.audio %}
+    <audio controls preload="none">
+      <source src="{{ song.audio }}" type="{% if song.audio contains '.m4a' %}audio/mp4{% else %}audio/mpeg{% endif %}">
+    </audio>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
